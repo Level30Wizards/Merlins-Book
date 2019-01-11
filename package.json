@@ -1,0 +1,27 @@
+{
+  "name": "Merlins-Book",
+  "version": "1.0.0",
+  "description": "This repository contains the portfolio website of Level30Wizards",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Level30Wizards/Merlins-Book.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Level30Wizards/Merlins-Book/issues"
+  },
+  "homepage": "https://github.com/Level30Wizards/Merlins-Book#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.8",
+    "sass": "^1.16.0"
+  },
+  "dependencies": {
+    "gsap": "^2.0.2"
+  }
+}
