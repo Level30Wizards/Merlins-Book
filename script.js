@@ -15,7 +15,6 @@ const staff = document.querySelector('#staff')
 const leftHand = document.querySelector('#left')
 const content = document.querySelectorAll('.card-holder')
 const title = document.querySelector('h1')
-const merlinSvg = document.querySelectorAll('#Merlin path, #Merlin circle, #Merlin polygon')
 
 const wizardComponents = []
 wizardComponents.push( torso, hands, face, hair, beard, staff)
@@ -57,6 +56,9 @@ setTl
         y: -500,
         autoAlpha:0,
     }, 0)
+    .set('.contact', {
+        autoAlpha: 0
+    })
     .play()
     .eventCallback( 'onComplete', () => {
         TweenMax.to('.loader', .2, {
@@ -210,6 +212,9 @@ function animateWizard() {
                         .play()
                         .eventCallback( 'onComplete', () => {
                             document.querySelector('#wizard').style.zIndex = "-1"
+                            TweenMax.to('.contact', .2, {
+                                autoAlpha: 1
+                            })
                             addHoverPerspectiveAnimation()
                         })
                 });

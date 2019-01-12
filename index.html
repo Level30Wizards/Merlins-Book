@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132349720-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-132349720-1');
+        </script>
+
         <meta charset="UTF-8">
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -35,23 +45,22 @@
                     </pattern>
                     <filter id="softGlow" height="300%" width="300%" x="-75%" y="-75%">
                         <!-- Thicken out the original shape -->
-                        <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken" />
+                        <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken"></feMorphology>
 
                         <!-- Use a gaussian blur to create the soft blurriness of the glow -->
-                        <feGaussianBlur in="thicken" stdDeviation="10" result="blurred" />
+                        <feGaussianBlur in="thicken" stdDeviation="10" result="blurred"></feGaussianBlur>
 
                         <!-- Change the colour -->
-                        <feFlood flood-color="#4527a0" result="glowColor" />
+                        <feFlood flood-color="#4527a0" result="glowColor"></feFlood>
 
                         <!-- Color in the glows -->
-                        <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+                        <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" ></feComposite>
 
                         <!--	Layer the effects together -->
                         <feMerge>
-                            <feMergeNode in="softGlow_colored"/>
-                            <feMergeNode in="SourceGraphic"/>
+                            <feMergeNode in="softGlow_colored"></feMergeNode>
+                            <feMergeNode in="SourceGraphic"></feMergeNode>
                         </feMerge>
-
                     </filter>
                     <image id="image-2" width="512" height="512" xlink:href="https://www.filterforge.com/filters/9574.jpg"></image>
                     <linearGradient id="linearWhirl" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -66,7 +75,7 @@
                     </linearGradient>
                 </defs>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Merlin" transform="translate(0.000000, 2.000000)">
+                    <g transform="translate(0.000000, 2.000000)">
                         <g id="merlin-holder" transform="translate(0.000000, 17.000000)">
                             <g id="shadow" transform="translate(0.000000, 410.000000)" fill="#333333" fill-rule="nonzero">
                                 <ellipse id="Oval" cx="218.3" cy="69.9" rx="218.1" ry="69"></ellipse>
@@ -146,7 +155,6 @@
                                 <polygon fill="#19483C" points="65.3 91.3 4.9 92.1 33.1 0.2 90.5 16.6"></polygon>
                                 <polygon fill="#19483C" points="194.1 41.2 167.7 21.3 174.9 13.6"></polygon>
                             </g>
-                            <!-- <use  id="whirlwind" stroke="url(#linearWhirl)" stroke-width="5" xlink:href="#whirlWindPath"></use> -->
                             <g transform="translate(0, -16)" stroke="url(#linearWhirl)" filter="url(#softGlow)" stroke-width="5" id="whirlwind">
                                 <path d="M97.7518981,482.897024 C303.741551,470.958959 377.219222,460.967019 318.184912,452.921205" id="Path"></path>
                                 <path d="M104.338575,448.450597 C89.7274549,451.44031 89.7274549,452.522078 104.338575,451.6959 C313.665383,442.665691 384.530064,433.755954 316.932619,424.966688"></path>
@@ -178,7 +186,6 @@
                 </g>
             </svg>
         </div>
-
         <section class="card-holder">
             <svg class="magic-wand-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999">
                 <path d="M503.779 10.437c-7.739-7.738-20.025-7.906-27.971-.378l-260.89 247.173-7.021-7.021a7.63 7.63 0 0 0-6.965-2.073 7.6363 7.6363 0 0 0-5.546 4.696c-.131.337-13.3 33.776-29.896 50.451l-13.184 12.259-3.431-3.431c-1.535-1.535-3.654-2.341-5.817-2.225a7.6302 7.6302 0 0 0-5.538 2.849C97.775 362.345 52.47 407.651 2.861 447.395a7.6327 7.6327 0 0 0-.624 11.355l50.384 50.384a7.6296 7.6296 0 0 0 5.398 2.236c.139 0 .28-.004.42-.011a7.6302 7.6302 0 0 0 5.538-2.849c39.744-49.609 85.05-94.915 134.658-134.658a7.6327 7.6327 0 0 0 .624-11.355l-.553-.553 73.285-78.817c16.575-17.826 67.131-48.76 67.64-49.07 1.996-1.22 3.326-3.289 3.602-5.614s-.527-4.648-2.182-6.303l-6.332-6.332L504.1 38.466c7.464-7.815 7.319-20.389-.321-28.029zM76.55 469.74l-19.619-19.62c-2.981-2.981-7.815-2.981-10.796 0-2.981 2.981-2.981 7.815 0 10.796l20.434 20.433c-3.076 3.642-6.134 7.298-9.149 10.989L19.032 453.95c39.094-31.948 75.473-67.315 108.556-105.479l21.975 21.975c1.49 1.49 3.445 2.236 5.398 2.236s3.908-.745 5.398-2.236c2.981-2.981 2.981-7.816 0-10.796l-22.832-22.832c2.198-2.626 4.384-5.263 6.551-7.914l38.388 38.388c-38.058 31.101-73.541 65.443-105.916 102.448zM493.058 27.92L323.921 205.007l-3.914-3.914c-2.98-2.982-7.814-2.981-10.796 0s-2.981 7.815.001 10.796l9.427 9.427c.003.003.006.007.009.01l4.818 4.818c-15.552 9.856-48.797 31.679-62.656 46.585l-72.908 78.41-24.792-24.792 12.881-11.977c.068-.063.134-.127.2-.192 12.712-12.712 23.19-32.916 28.859-45.221l4.326 4.326 9.043 9.043c1.49 1.49 3.445 2.236 5.398 2.236s3.908-.745 5.398-2.236c2.981-2.981 2.981-7.816 0-10.796l-3.498-3.498L486.308 21.143c1.895-1.796 4.825-1.756 6.673.091 1.824 1.823 1.857 4.822.077 6.686z" fill="#FFF"/>
@@ -192,6 +199,9 @@
                 </a>
             </article>
         </section>
+        <footer class="contact">
+            <p>We will foresee your e-mail, </p><a href="mailto:merlin@level30wizards.com">merlin@Level30Wizards.com</a>
+        </footer>
         <script src="./script.js"></script>
     </body>
 </html>

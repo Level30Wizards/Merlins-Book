@@ -1,7 +1,7 @@
 body {
   background: #222;
   color: #7A468D;
-  font-family: 'Eczar', sans-serif;
+  font-family: "Eczar", sans-serif;
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -18,7 +18,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2
+  z-index: 2;
 }
 
 #wizard #shadow ellipse {
@@ -27,7 +27,7 @@ body {
 
 h1 {
   font-size: 3em;
-  margin: .5em auto 1em auto
+  margin: 0.5em auto 1em auto;
 }
 
 h1 .level30 {
@@ -39,12 +39,10 @@ h1 .wizards {
 }
 
 @media (min-width: 48rem) {
-
   h1 {
     font-size: 5em;
   }
 }
-
 ul {
   padding: 0;
   list-style: none;
@@ -59,12 +57,12 @@ ul {
   bottom: 2vh;
   left: 50%;
   transform: translateX(-50%);
-  p {
-    display: inline;
-  }
-  a {
-    color: #8f8f8f;;
-  }
+}
+.contact p {
+  display: inline;
+}
+.contact a {
+  color: #8f8f8f;
 }
 
 .card-holder {
@@ -74,9 +72,9 @@ ul {
   flex-flow: row wrap;
   overflow-y: hidden;
   overflow-x: scroll;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+}
+.card-holder::-webkit-scrollbar {
+  display: none;
 }
 
 .magic-wand-arrow {
@@ -96,7 +94,6 @@ ul {
     transform: rotate(45deg) translate(1rem, -25%);
   }
 }
-
 .card-container {
   color: #ececec;
   text-align: left;
@@ -104,9 +101,9 @@ ul {
   display: flex;
   width: auto;
   height: 70vh;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+}
+.card-container::-webkit-scrollbar {
+  display: none;
 }
 
 .card-container .link {
@@ -118,14 +115,14 @@ ul {
 }
 
 .card-container li::before {
-  content: '- ';
+  content: "- ";
 }
 
 .card-container .shadow {
   width: 100%;
   height: 10%;
   background-color: black;
-  opacity: .1;
+  opacity: 0.1;
   position: absolute;
   bottom: -50%;
 }
@@ -142,41 +139,29 @@ ul {
   margin: 5vw;
   padding: 15vh 2.5vh;
   background-color: transparent;
-  background-image: url('https://potterversecon.com/wp-content/uploads/2018/02/magic-101.jpg');
+  background-image: url("https://potterversecon.com/wp-content/uploads/2018/02/magic-101.jpg");
   text-decoration: none;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-
-  &.verhalenvanger {
-    background:
-            linear-gradient(
-                            rgba(0, 0, 0, 0.45),
-                            rgba(0, 0, 0, 0.45)
-            ),
-            url('https://raw.githubusercontent.com/Level30Wizards/de-verhalenvanger/master/2019-01-11%2013_00_25-De%20Verhalenvanger.png');
-    background-size: cover;
-  }
-  &.github {
-    background:
-            linear-gradient(
-                            rgba(0, 0, 0, 0.45),
-                            rgba(0, 0, 0, 0.45)
-            ),
-            url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: white;
-    background-position: center;
-  }
-
-  .hatSVG {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+}
+.card-container .card.verhalenvanger {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://raw.githubusercontent.com/Level30Wizards/de-verhalenvanger/master/2019-01-11%2013_00_25-De%20Verhalenvanger.png");
+  background-size: cover;
+}
+.card-container .card.github {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center;
+}
+.card-container .card .hatSVG {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .loader {
@@ -186,13 +171,12 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: absolute;
   top: 0;
   left: 0;
   z-index: 99999;
   pointer-events: none;
-  p {
-    font-size: 4rem;
-  }
+}
+.loader p {
+  font-size: 4rem;
 }
