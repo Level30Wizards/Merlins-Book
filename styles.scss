@@ -159,6 +159,15 @@ ul {
             url('https://raw.githubusercontent.com/Level30Wizards/de-verhalenvanger/master/2019-01-11%2013_00_25-De%20Verhalenvanger.png');
     background-size: cover;
   }
+  &.kastanjeboom {
+    background:
+            linear-gradient(
+                            rgba(0, 0, 0, 0.45),
+                            rgba(0, 0, 0, 0.45)
+            ),
+            url('./kastanjeboom-bg.jpg');
+    background-size: cover;
+  }
   &.github {
     background:
             linear-gradient(

@@ -151,6 +151,10 @@ ul {
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://raw.githubusercontent.com/Level30Wizards/de-verhalenvanger/master/2019-01-11%2013_00_25-De%20Verhalenvanger.png");
   background-size: cover;
 }
+.card-container .card.kastanjeboom {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("kastanjeboom-bg.3cf8d08c.jpg");
+  background-size: cover;
+}
 .card-container .card.github {
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png");
   background-size: contain;
